@@ -1,0 +1,23 @@
+Lab 1: System Intro
+Activity 2: questions2.txt, main/circle code : 30 points total
+Name: <<< Nicholas Graca >>>
+
+8. Given the program files main.c, circle.h and circle.c:
+
+    a.) What commands will compile the source files into object files?
+        
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	gcc -c main.c       
+	gcc -c circle.c
+	gcc -c circle.h
+ 
+    b.) What command will link the object files
+        into an executable named broken?
+        
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	gcc -o broken main.o circle.o
+        
+    c.) Why does the program compile but fail to link?
+    
+        <<< YOUR ANSWER BELOW HERE (and do not remove this line)
+	The code is not wrong but the refrence to the other .c program is.	

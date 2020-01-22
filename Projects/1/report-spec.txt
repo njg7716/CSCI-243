@@ -1,0 +1,64 @@
+Assignment Report
+Assignment name is: Brace-topia
+
+My name is: 	Nicholas Graca
+My login ID is:	818001500
+
+[insert your answers after the question and add more lines as needed.]
+
+[PLEASE MAKE YOUR ANSWERS SHORT AND TO THE POINT. BULLET POINTS ARE GOOD.]
+
+============= PROGRAM STATUS ==============
+
+What is the status of the program?
+Does it: put an X inside the [] for your answer
+	[] crash?
+	[] infinite loop when it should not?
+	[] only work in printed mode?
+	[X] work fine?
+	[] only implement these options: [list them below]
+	[] other? Explain below.
+
+
+How does your move algorithm work? Describe briefly in English.
+
+First it finds the agent that is unhappy and wants to move. Then
+it will call the relocate function which finds the first open spot 
+and moves the agent there.
+
+============= SIMULATION ANALYSIS ==============
+
+What did you find most revealing about the simulation?
+
+How straight forward this was compared to the projects I
+have done in CS1 and CS2.
+
+
+============= GENERAL PROJECT FEEDBACK ==============
+
+What did I learn?
+
+I learned how to handle command line arguments and error handling.
+
+
+What was easy about this assignment?
+
+The basic structure because we did something very similar for homework.
+
+What gave you problems or troubles?
+
+The printing of the grid after I move an agent gave me the most
+trouble.
+
+What should the instructor do to improve this assignment?
+
+If I did this wrong then the instructions were unclear but
+the teams' happiness was very difficult to understand what it 
+was.
+
+What would you have liked to do in this assignment?
+
+There was a lot more work to do than our average homeworks
+but it was a pretty easy concept so I'm not sure if I would 
+change anything.
+
