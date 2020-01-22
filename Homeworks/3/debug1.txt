@@ -1,0 +1,78 @@
+njg7716@queeg:~/Courses/CS243/Homeworks/3/hw3/act1$ gdb -q good-life
+Reading symbols from good-life...done.
+(gdb) run 123
+Starting program: /home/stu9/s9/njg7716/Courses/CS243/Homeworks/3/hw3/act1/good-life 123
+
+        ..Welcome to the Game of life..
+
+Please enter the initial number of organisms: 123
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff7a5bcc0 in _IO_vfprintf_internal (
+    s=0x7ffff7dd2620 <_IO_2_1_stdout_>, format=<optimized out>,
+    ap=ap@entry=0x7fffffffe638) at vfprintf.c:1632
+1632    vfprintf.c: No such file or directory.
+(gdb) where
+#0  0x00007ffff7a5bcc0 in _IO_vfprintf_internal (
+    s=0x7ffff7dd2620 <_IO_2_1_stdout_>, format=<optimized out>,
+    ap=ap@entry=0x7fffffffe638) at vfprintf.c:1632
+#1  0x00007ffff7a62899 in __printf (format=<optimized out>) at printf.c:33
+#2  0x0000000000400cd4 in main () at good-life.c:144
+(gdb) frame N
+No symbol "N" in current context.
+(gdb) frame up
+No symbol "up" in current context.
+(gdb) frame down
+No symbol "down" in current context.
+(gdb) up
+#1  0x00007ffff7a62899 in __printf (format=<optimized out>) at printf.c:33
+33      printf.c: No such file or directory.
+(gdb) list
+28      in printf.c
+(gdb) down
+#0  0x00007ffff7a5bcc0 in _IO_vfprintf_internal (
+    s=0x7ffff7dd2620 <_IO_2_1_stdout_>, format=<optimized out>,
+    ap=ap@entry=0x7fffffffe638) at vfprintf.c:1632
+1632    vfprintf.c: No such file or directory.
+(gdb) list
+1627    in vfprintf.c
+(gdb) down
+Bottom (innermost) frame selected; you cannot go down.
+(gdb) lsit
+Undefined command: "lsit".  Try "help".
+(gdb) list
+1627    in vfprintf.c
+(gdb) up
+#1  0x00007ffff7a62899 in __printf (format=<optimized out>) at printf.c:33
+33      printf.c: No such file or directory.
+(gdb) up
+#2  0x0000000000400cd4 in main () at good-life.c:144
+144                                       printf("%s", life[row][col]);
+(gdb) up
+Initial frame selected; you cannot go up.
+(gdb) lsit
+Undefined command: "lsit".  Try "help".
+(gdb) list
+139
+140                      for(row = 0; row<20; row++)
+141                      {
+142                               for(col = 0; col<20; col++)
+143                               {
+144                                       printf("%s", life[row][col]);
+145                               }
+146                               puts(" ");
+147                       }
+148
+(gdb) break
+Breakpoint 1 at 0x400cd4: file good-life.c, line 142.
+(gdb) info break
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000400cd4 in main
+                                                   at good-life.c:142
+(gdb) break 144
+Breakpoint 2 at 0x400c91: file good-life.c, line 144.
+(gdb) delete breakpoint 1
+(gdb) info break
+Num     Type           Disp Enb Address            What
+2       breakpoint     keep y   0x0000000000400c91 in main
+                                                   at good-life.c:144

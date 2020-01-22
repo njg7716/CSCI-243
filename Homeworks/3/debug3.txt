@@ -1,0 +1,179 @@
+tarting program: /home/stu9/s9/njg7716/Courses/CS243/Homeworks/3/hw3/act1/good-life
+
+        ..Welcome to the Game of life..
+
+Please enter the initial number of organisms: 123
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+(gdb) display row
+1: row = 0
+(gdb) display col
+2: col = 0
+(gdb) display life[row][col]
+3: life[row][col] = 16 '\020'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 1
+3: life[row][col] = -44 '\324'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 2
+3: life[row][col] = -95 '\241'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 3
+3: life[row][col] = -9 '\367'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 4
+3: life[row][col] = -1 '\377'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 5
+3: life[row][col] = 127 '\177'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 6
+3: life[row][col] = 0 '\000'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 7
+3: life[row][col] = 0 '\000'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 8
+3: life[row][col] = 120 'x'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 9
+3: life[row][col] = 117 'u'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 10
+3: life[row][col] = -1 '\377'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 11
+3: life[row][col] = -9 '\367'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 12
+3: life[row][col] = -1 '\377'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 13
+3: life[row][col] = 127 '\177'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 14
+3: life[row][col] = 0 '\000'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 15
+3: life[row][col] = 0 '\000'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 16
+3: life[row][col] = -112 '\220'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 17
+3: life[row][col] = -24 '\350'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 18
+3: life[row][col] = -1 '\377'
+(gdb) continue
+Continuing.
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 0
+2: col = 19
+3: life[row][col] = -1 '\377'
+(gdb) continue
+Continuing.
+16-44-95-9-112700120117-1-9-112700-112-24-1-1
+
+Breakpoint 1, main () at good-life.c:144
+144                                       printf("%i", life[row][col]); //fix1
+1: row = 1
+2: col = 0
+3: life[row][col] = -1 '\377'
+(gdb)
+
+On lines 128 and 136 there was a double equals sign when it should have been a single equals sign.
+Also you have to go back to lines 144 and 156 and change the %i to %c

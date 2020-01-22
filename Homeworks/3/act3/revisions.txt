@@ -1,0 +1,41 @@
+commit 37c54bd53caf9fbeed1f8c0b82d6ed3f562f4d93
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Sep 21 14:56:17 2017 -0400
+
+    I finished Act 3 so now the alrothim is implemented correctly and it displays as wanted.
+
+commit b36abb904b9b2006f16b330391e45d7b2d768ddc
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Sep 21 00:16:28 2017 -0400
+
+    I think my algorithm now works but I have nothing to compare it to...
+
+commit 4798b854d1b7f9ce3395376114359407245742a9
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Wed Sep 20 21:05:33 2017 -0400
+
+    I have finished B2 of Act2 by refactoring the code to teh specifications provided.
+
+commit 69ab8358074ebc0be10a55beb4334f1208e36297
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Wed Sep 20 19:31:31 2017 -0400
+
+    I have completed Act2 Part A of the homework
+
+commit c4233cad4e18182221c05ba6144a0f1c05e9d1fc
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Sep 19 23:14:40 2017 -0400
+
+    I changed the == to = in lines 128 and 136. Then changed %i to %c in lines 144 and 156.
+
+commit 7925bbcb3ca05c0edcf93ae4035dec5e5df65faf
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Sep 19 22:49:13 2017 -0400
+
+    I changed the program so it longer crashes but now there is an infinite loop.
+
+commit 283e8ddc0a82654f8a58f79f0555c4c632e52353
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Sep 19 22:04:39 2017 -0400
+
+    Added files to git repository.

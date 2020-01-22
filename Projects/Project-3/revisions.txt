@@ -1,0 +1,60 @@
+commit 200d93408878973c1413bb35d84f5cd3459b7f3a
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sat Dec 9 16:04:48 2017 -0500
+
+    I pass all try tests and I finished adding comments to my code so I AM DONE!
+
+commit 1563bca182c2b6f71a6ad5106b9f60fc8b17a1a0
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Fri Dec 8 10:10:26 2017 -0500
+
+    I went through and fixed some of the little things. I now completely match the test file output. Now just to comment and hand in!
+
+commit 3e22cc86fa2eba6f511aca1d6a13d4d983be138c
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Dec 7 23:34:10 2017 -0500
+
+    I believe I have done everything that the write up asks so now i just need to comment the rest of it.
+
+commit cfea2add5e3f9e85e797ea2d3a4b22c63bcaff68
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Dec 7 10:28:11 2017 -0500
+
+    My code now handles if statements and it also handles them if they are nested!
+
+commit 30202b5b899fe9f17532b14aa115818919dd259f
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Dec 7 01:16:20 2017 -0500
+
+    I have handled teh commands prt and display. Now I just need to handle if statements and if they type fred in the command line.
+
+commit fd8d683b9de42b92876ab118113ead6a5d917aaf
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Wed Dec 6 23:45:25 2017 -0500
+
+    I can now process the let commands from a file.
+
+commit 05e35920315f8ff51000567f484a406011cf913d
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Wed Dec 6 02:52:06 2017 -0500
+
+    I can now take in the let command and convert it to postfix so then later I can evaluate the expression.
+
+commit d02b602e10a5673bd43e35b4b48df739d604fbdf
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Dec 5 09:42:22 2017 -0500
+
+    I fixed my symbol table a little bit so now it works with the supplied files.
+
+commit 5ef135c97a28b81436eb34bdbdf4df620e9e872a
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Mon Dec 4 23:49:48 2017 -0500
+
+    Everything with my SymbolTable is now done. Now I need to comment and then handle the Fred language.
+
+commit 74c16ac2085e6cc1fff06c82edec090ae0f8ebba
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Mon Dec 4 19:21:08 2017 -0500
+
+    I have started to write the code after writing down how I am going to do this
+    project.

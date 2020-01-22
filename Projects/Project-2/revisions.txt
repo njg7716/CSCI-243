@@ -1,0 +1,53 @@
+commit ca95ef494ea1d83137980ef38f056718d9cd510a
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sun Nov 12 11:50:21 2017 -0500
+
+    I added some more comments to better explain my put function.
+
+commit de9a5a16ac79d28919d5c67ae9a88a993a1f1323
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sun Nov 12 02:38:31 2017 -0500
+
+    I finally have everything working for part one and it should pass try with no issues!
+
+commit 35abf0403761b425877376d4c63e9599ff4d3ed9
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Fri Nov 10 17:55:04 2017 -0500
+
+    I have no idea why my size is off but that is probably throwing off my collisions too.
+
+commit 4792d3d10351651b1d14bffcfeb4331488ef5c57
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Fri Nov 10 09:59:12 2017 -0500
+
+    Ok so now everything will run but in my stress test I have 30 more in my size and my number of collisions are off.
+
+commit 38698303202087fefe3fe9b7d90e979cbee2992f
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Nov 9 23:36:48 2017 -0500
+
+    I think that I finally have everything working!
+
+commit a6c72e0ec7eef11e42259a86e61a3d2a162731cb
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Wed Nov 8 08:34:41 2017 -0500
+
+    I added some comments to help explain my code.
+
+commit 7df381f38c0cd3905158cc2a8c0de1f9cff95350
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Wed Nov 8 01:04:48 2017 -0500
+
+    EVERYTHING WORKS! but only for the first time through. Then it seg faults when I put for the first time. I think there is something wrong in my create...
+
+commit 76a7b33cdbf247441f88bfdab6fdd07dfd160129
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Mon Nov 6 23:52:46 2017 -0500
+
+    I got most of the fuctions to work. Now I just need to resize when the threshold is reached and hopefully most of my problems will be solved.
+
+commit 2a2da38a66e7d50aec2a16ab5fa0d518503847db
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Mon Nov 6 20:22:45 2017 -0500
+
+    Initial checkin

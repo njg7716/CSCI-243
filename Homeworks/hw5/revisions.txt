@@ -1,0 +1,24 @@
+commit 0219ff12c392b72bd4ba9aa67f3821b8a0dc387c
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sat Oct 21 19:43:11 2017 -0400
+
+    Added some documentation
+
+commit e017f2a68028fe76a7d87f787e11fce8aeb8aa30
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sat Oct 21 19:36:40 2017 -0400
+
+    I can pass try but I still have a memory leak that needs to be clogged!!!!
+
+commit c6413d662b021767e837b0c238ff5ec925509cb1
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Oct 19 21:47:10 2017 -0400
+
+    I forgot to make a git file at the very beginning but remembered to do it
+    after I already wrote a little code.
+
+commit 87e4d9a735a273e6f61be91ca63734fa18defdfa
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Oct 17 23:07:55 2017 -0400
+
+    The creation of the file.

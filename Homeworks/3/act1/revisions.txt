@@ -1,0 +1,17 @@
+commit c4233cad4e18182221c05ba6144a0f1c05e9d1fc
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Sep 19 23:14:40 2017 -0400
+
+    I changed the == to = in lines 128 and 136. Then changed %i to %c in lines 144 and 156.
+
+commit 7925bbcb3ca05c0edcf93ae4035dec5e5df65faf
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Sep 19 22:49:13 2017 -0400
+
+    I changed the program so it longer crashes but now there is an infinite loop.
+
+commit 283e8ddc0a82654f8a58f79f0555c4c632e52353
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Sep 19 22:04:39 2017 -0400
+
+    Added files to git repository.

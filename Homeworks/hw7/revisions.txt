@@ -1,0 +1,31 @@
+commit f1f92b92238561fb343eb510397ec9e7defae4ac
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Nov 16 20:55:59 2017 -0500
+
+    I added comments so now it should be all set to hand in and get a 100!
+
+commit bfa7e924345736ef1a1c8f95db143e27bc30d4fa
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Nov 16 15:03:08 2017 -0500
+
+    Turns out I had more to do to pass my try tests than I thought but now
+    I pass all the test and I just need to comment my code.
+
+commit 1da7561d202282bf63857073da621d388908e41c
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Nov 16 14:09:39 2017 -0500
+
+    I believe my program is 100% done except for the comments that I need to write.
+
+commit ecf636c395df1e675dad28fc422b731c807c70e5
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Nov 16 09:08:55 2017 -0500
+
+    I am able to get everything from the first packet in the file. Now I need
+    to make it loop through all the packets in the file.
+
+commit d874cb678f29a8ebb0e821f1d466197c593ecd59
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Tue Nov 14 22:40:18 2017 -0500
+
+    I just started looking at Homework 7.

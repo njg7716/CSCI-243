@@ -1,0 +1,264 @@
+// Author: Nicholas Graca
+// Date: 12/5/17
+
+#include "interpret.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+#include <ctype.h>
+
+// reads a file that is in fred and calls the respective functions depending on
+// the fred command used
+void readFredFile(FILE* fp, Table* t){
+	char line [100];
+	if(t == NULL){
+		t = create();
+	}
+	while(fgets(line, 100, fp)){
+		char* tok = strtok(line, " ,\n");
+		if(strcmp(tok, "define") == 0){
+			define(t, tok);
+		}
+		if(strcmp(tok, "let") == 0){
+			let(t, tok);
+		}		
+	}
+	fclose(fp);
+}
+
+bool getPrecedence(char* one, char* two){
+	if(strcmp(one, "(") == 0){
+		return true;
+	}
+	else if(strcmp(two, "(") == 0){
+		return false;
+	}
+	else if((strcmp(two, "*") == 0) || (strcmp(two, "/") == 0)){
+		if((strcmp(one, "*") == 0) || (strcmp(one, "/") == 0)){
+			return true;
+		}
+		return false;
+	}
+	else{
+		if(((strcmp(one, "+") == 0) || (strcmp(one, "-") == 0)) && ((strcmp(two, "+") == 0) || (strcmp(two, "-") == 0))){
+			return true;
+		}
+	}
+	return false;
+}
+
+//Adds Node to the stack
+Node* push(Node* oldHead, Node* newHead){
+	newHead->next = oldHead;
+	return newHead;
+}
+
+//Removes node from stack and returns the operator
+Node* pop(Node* head){
+	Node* temp = head;
+	head = head->next;
+	return temp;
+}
+
+// Creates a new node
+Node* createNode(char* name){
+	Node* head = (Node*)malloc(sizeof(Node));
+	strcpy(head->name, name);
+	head->next = NULL;
+	return head;
+}
+
+//Converts Infix expression to postfix
+char** infixToPostfix(char** equ, Table* t){
+	char** final = calloc(15, 8);
+	for(int y = 0; y < 15; y++){
+		final[y] = calloc(1, 8);
+	}
+	int x = 0;
+	Node* head = NULL;
+	Node* temp = NULL;
+	for(int i = 0; i < 15; i++){
+		if(equ[i] == NULL){
+			break;
+		}
+		//  Checks if there it is an operator, if so, add it to stack
+		if(strcmp(equ[i], "+") == 0 || strcmp(equ[i], "-") == 0 || strcmp(equ[i], "*") == 0 || strcmp(equ[i], "/") == 0 || strcmp(equ[i], "(") == 0){
+			if(head == NULL){
+				head = createNode(equ[i]);
+			}
+			//check if head is not left parenthesis and head has greater or equal
+			// precendence than equ[i] operator, pop and add to list, then push new
+			else if(strcmp(head->name, "(") != 0){
+				if(getPrecedence(head->name, equ[i]) == true){
+					temp = pop(head);
+					head = head->next;
+					strcpy(final[x], temp->name);
+					free(temp);
+					x++;
+					temp = createNode(equ[i]);
+	 				head = push(head, temp);
+				}
+				//add operator to stack
+				else{
+					temp = createNode(equ[i]);
+					head = push(head, temp);
+				}
+			}
+			else{
+				temp = createNode(equ[i]);
+				head = push(head, temp);
+			}
+		}
+
+		// Checks if it is a right paranthesis, if so, if stack is not empty and head is not
+		// left parenthesis, pop operator and discard right and left parenthesis
+		else if(strcmp(equ[i], ")") == 0){
+			if(head != NULL && strcmp(head->name, "(") != 0){
+				temp = pop(head);
+				head = head->next;
+				strcpy(final[x], temp->name);
+				x++;
+				free(temp);
+			}
+			if(strcmp(head->name, "(") == 0){
+				temp = pop(head);
+				head = head->next;
+				free(temp);
+			}
+		}
+		// Checks if it is a variable in the symTable
+		// if so, gets value and adds it to output list
+		else if(has(t, equ[i])){
+			Symbol* sym = get(t, equ[i]);
+			char val[20];
+			sprintf(val, "%f", sym->value.fVal);
+			strcpy(final[x], val);
+			x++;
+		}
+		// It must just be a number so add it to output list
+		else{
+			strcpy(final[x], equ[i]);
+			x++;
+		}
+	}
+	while(head != NULL){
+		temp = pop(head);
+		head = head->next;
+		strcpy(final[x], temp->name);
+		x++;
+		free(temp);
+	}	
+	return final;
+}
+
+int evaluatePostfix(char** final){
+	Node* head = NULL;
+	Node* temp = NULL;
+	for(int i = 0; i < 15; i++){
+		if(strcmp(final[i], "+") == 0 || strcmp(final[i], "-") == 0 || strcmp(final[i], "*") == 0 || strcmp(final[i], "/") == 0){
+			printf("%s\n", head->name);
+			temp = pop(head);
+			head = head->next;
+			int val1 = atoi(temp->name);
+			free(temp);
+			temp = pop(head);
+			head = head->next;
+//			printf("%s\n", head->name);
+			int val2 = atoi(temp->name);
+			free(temp);
+			char v[20];
+			if(strcmp(final[i], "+") == 0){
+				int val = val1 + val2;
+				sprintf(v, "%d", val);
+				temp = createNode(v);
+				head = push(head, temp);
+			}
+			else if(strcmp(final[i], "-") == 0){
+				int val = val1 - val2;
+				sprintf(v, "%d", val);
+				temp = createNode(v);
+				head = push(head, temp);
+			}
+			else if(strcmp(final[i], "/") == 0){
+				int val = (int)(val1 / val2);
+				sprintf(v, "%d", val);
+				temp = createNode(v);
+				head = push(head, temp);
+			}
+			else if(strcmp(final[i], "*") == 0){
+				int val = val1 * val2;
+				sprintf(v, "%d", val);
+				temp = createNode(v);
+				head = push(head, temp);
+			}
+		}
+		else{
+			if(head == NULL){
+				head = createNode(final[i]);
+			}
+			else{
+				temp = createNode(final[i]);
+				head = push(head, temp);
+			}
+		}
+	}
+	int fin = atoi(head->name);
+	free(head);
+	return fin;
+}
+
+//Handles the let command in fred
+void let(Table* t, char* tok){
+	tok = strtok(NULL, " :=");
+//	char* var = tok;
+	tok = strtok(NULL, " :=");
+	char** equ = calloc(15, 8);
+	for(int y = 0; y < 15; y++){
+		equ[y] = calloc(1, 8);
+	}
+	int x = 0;
+	while(tok != NULL){
+		strcpy(equ[x], tok);
+		x++;
+		tok = strtok(NULL, " \n");
+	}
+	char** final = infixToPostfix(equ, t);
+	int fin = evaluatePostfix(final);
+	printf("%d\n", fin);
+	for(int i = 0; i < 15; i++){
+		free(final[i]);
+		free(equ[i]);
+	}
+	free(final);
+	free(equ);
+}
+
+//Handles the define command in fred
+void define(Table* t, char* tok){
+	tok = strtok(NULL, " \n");
+	char* varType = tok;
+	Type type;
+	if(strcmp(varType, "integer") == 0){
+		type = Integer;
+	}
+	else if(strcmp(varType, "real") == 0){
+		type = Float;
+	}
+	else if(strcmp(varType, "unknown") == 0){
+		type = Unknown;
+	}
+	tok = strtok(NULL, " ,\n");
+	while(tok != NULL){
+		char* name = tok;
+		Value value;
+		if(strcmp(varType, "Integer") == 0){
+			value.iVal = 0;
+		}
+		else{
+			value.fVal = 0;
+		}
+		put(t, name, value, type);
+		tok = strtok(NULL, " ,\n");
+	}
+}

@@ -1,0 +1,18 @@
+commit 8e0e3880e8439beff7797e57ce500c0429a57f9b
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sat Oct 28 21:45:45 2017 -0400
+
+    I'm not sure what I am doing wrong. I pass both test files given to me but when I try, I get some errors.
+
+commit c930e397eefbf8d65f867c0303e9b9197a36e8ea
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Sat Oct 28 21:17:51 2017 -0400
+
+    I am very close to being done but I am missing like one thing!
+
+commit 7a4f0abc5aae70c96ec85ec9bbe172ce9c704626
+Author: Nick James Graca <njg7716@cs.rit.edu>
+Date:   Thu Oct 26 21:26:26 2017 -0400
+
+    Sorry for starting this a little late. I think what I have is close to being correct
+    sine it compiles but with this language, I will never know.
